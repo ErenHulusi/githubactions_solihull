@@ -1,0 +1,8 @@
+name: Output Information
+on: [workflow_dispatch, push]
+jobs:
+  gather-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: output info
+        run: echo "${{ toJSON( github ) }}"
