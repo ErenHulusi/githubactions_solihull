@@ -1,15 +1,13 @@
-name: first workflow demo
-on: workflow_dispatch
+name: Deploy Web App
+on: push
 jobs:
-  my_first_workflow_job: 
+  deploy_app:
     runs-on: ubuntu-latest
-    steps:
-      - name: hello world
-        run: echo "hello world"
-      - name: bit o` wisdom
-        run: echo "never eat yellow snow"
-      - name: combo execute
-        run: |
-          echo "hello world"
-          echo echo "never eat yellow snow"
-        
+    steps: 
+      - name: Download coe
+        uses: actions/checkout@v3
+      - name: investigate host
+        run: 
+          pwd
+          ls -lart
+          
