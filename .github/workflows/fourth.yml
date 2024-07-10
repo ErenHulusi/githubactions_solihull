@@ -4,7 +4,12 @@ on:
   pull_request: 
     types: [opened, synchronize]
   workflow_dispatch:
-
+  push:
+    branches:
+      - main
+      - demo_branch
+    paths-ignore:
+      - '.github/workflows/*'
 jobs:
   gather-info:
     runs-on: ubuntu-latest
