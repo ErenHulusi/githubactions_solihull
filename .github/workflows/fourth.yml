@@ -9,8 +9,8 @@ on:
       - main
       - demo_branch
       - 'dev_*'
-    paths-ignore:
-      - '.github/workflows/*'
+    # paths-ignore:
+    #   - '.github/workflows/*'
 jobs:
   gather-info:
     runs-on: ubuntu-latest
